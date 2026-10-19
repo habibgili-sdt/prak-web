@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan-Praktikum-02</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="registrasi.html">Registrasi</a>
+    </nav>
+    
+    <!-- Bagian Latihan Format Teks -->
+    <section id="format">
+        <h2>Format Teks</h2>
+        <p>Teks <b>tebal</b> dan teks <strong>penting</strong>.</p>
+        <p>Teks <i>miring</i> dan teks <em>ditekankan</em>.</p>
+        <p>Kata kunci: <mark>Sains Data Terapan</mark>.</p>
+        <p><small>Catatan: ini berukuran kecil.</small></p>
+        <p>Biaya: <del>Rp.100.000</del> <ins>75.000</ins></p>
+        <p>Rumus air: H<sub>2</sub>o, luas persegi: s<sup>2</sup> </p>
+        <p>Alamat:<br>Jl. Contoh No. 10<br>Sleman, D.I. Yogyakarta</p>
+        <hr>
+        <p>Menulis tag di dalam teks: &lt;p&gt; dan simbol &amp;</p>
+    </section>
+
+    <section id="warna">
+        <h2 style="color: navy;">Warna di HTML</h2>
+        <p style="color: tomato;">Nama warna</p>
+        <p style="color: #1e90ff;">Kode HEX #1e90ff</p>
+        <p style="color: rgb(60, 179, 113);">Kode RGB: rgb(60, 179, 113)</p>
+        <p style="color: hsl(39, 100%, 50%);">Kode HSL: hsl(39, 100%, 50%)</p>
+        <p style="background-color: lightyellow; font-size: 20px; text-align: center; font-family: Verdana, sans-serif;">Paragraf dengan latar, ukuran huruf, perataan, dan jenis huruf.</p>
+    </section>
+
+    <section id="info">
+        <h2>Block dan Inline</h2>
+        <div style="background-color: lightgray;">Ini adalah elemen dev (block)</div>
+        <span style="background-color: yellow;">Ini span 1</span>
+        <span style="background-color: yellow;">Ini span 2</span>
+        
+        <div class="kartu">
+            <h3>Kartu Info</h3>
+            <p>Mahasiswa angkatan <span class="sorot">2025</span></p>
+        </div>
+        <div class="kartu">
+            <h3>Kartu Kontak</h3>
+            <p>Email: <span class="sorot">mahasiswa@example.com</span></p>
+        </div>
+        <div class="unggulan">
+            <h3>Kartu unggulan</h3>
+            <p>unggulan: <span class="sorot">Keahlian saya keren</span></p>
+        </div>
+    </section>
+
+    <section id="jadwal">
+    <h2>Jadwal Praktikum</h2>
+    <table>
+        <caption>Jadwal Praktikum Semester 3</caption>
+        <thead>
+            <tr>
+                <th>Hari</th>
+                <th>Jam</th>
+                <th>Mata Kuliah</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="2">Total praktikum</td>
+                <td>2 sesi</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td rowspan="2">Senin</td>
+                <td>08.00-09.40</td>
+                <td>Praktikum Web</td>
+            </tr>
+            <tr>
+                <td>13.00-14.40</td>
+                <td>Praktikum Basis Data</td>
+            </tr>
+            <tr>
+                <td>Rabu</td>
+                <td>Tidak ada praktikum</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="nilai">
+    <h2>Rekap Nilai</h2>
+    <table>
+        <caption>Rekap Nilai Praktikum Web</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Nama</th>
+                <th colspan="3">Nilai</th>
+                <th rowspan="2">Rata-rata</th>
+            </tr>
+            <tr>
+                <th>Tugas</th>
+                <th>UTS</th>
+                <th>UAS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Andi</td>
+                <td>80</td>
+                <td>75</td>
+                <td>85</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>Budi</td>
+                <td>90</td>
+                <td>80</td>
+                <td>85</td>
+                <td>85</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="tabel tugas">
+    <h2>Tabel Tugas</h2>
+    <table>
+    <tr>
+        <td colspan="3" align="center">Jadwal Lab Komputer</td>
+    </tr>
+    <tr>
+        <td>Jam</td>
+        <td>Lab A</td>
+        <td>Lab B</td>
+    </tr>
+    <tr>
+        <td>08.00-09.40</td>
+        <td rowspan="2">Pemrograman Web</td>
+        <td rowspan="2">Basis Data</td>
+    </tr>
+    <tr>
+        <td>09.40-11.20</td>
+    </tr>
+    <tr>
+        <td>11.20-13.00</td>
+        <td colspan="2">Istirahat</td>
+    </tr>
+    </table>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

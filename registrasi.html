@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Mahasiswa Baru</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #form-registrasi legend {
+            color: darkgreen;
+        }
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <h1>Registrasi Mahasiswa Baru</h1>
+        <p id="status-halaman">Silakan mengisi formulir.</p>
+        <p><a href="index.html">Kembali ke Profil</a></p>
+    </header>
+    <main>
+        <form id="form-registrasi" action="" method="get" autocomplete="on">
+        <fieldset>
+            <legend style="color: crimson;">Data Akun</legend>
+            <p>
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username"
+                    placeholder="contoh: andi26" minlength="4" maxlength="20"
+                    autofocus required>
+            </p>
+            <small id="preview-username"></small>
+            <p>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password"
+                    minlength="8" required>
+            </p>
+            <small id="jumlah-karakter"></small>
+            <button type="button" id="toggle-password">Tampilkan Password</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Data Pribadi</legend>
+            <p>
+                <label for="nama">Nama Lengkap</label><br>
+                <input type="text" id="nama" name="nama" size="40" required>
+            </p>
+            <p>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email"
+                    placeholder="nama@example.com" required>
+            </p>
+            <p>
+                <label for="telepon">Nomor HP</label><br>
+                <input type="tel" id="telepon" name="telepon"
+                    pattern="[0-9]{10,13}" title="10-13 digit angka" required>
+            </p>
+            <p>
+                <label for="tgl-lahir">Tanggal Lahir</label><br>
+                <input type="date" id="tgl-lahir" name="tgl_lahir"
+                    min="1995-01-01" max="2010-12-31" required>
+            </p>
+            <p>Jenis Kelamin</p>
+            <input type="radio" id="laki" name="jenis_kelamin" value="L" required>
+            <label for="laki">Laki-laki</label>
+            <input type="radio" id="perempuan" name="jenis_kelamin" value="P">
+            <label for="perempuan">Perempuan</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Data Akademik</legend>
+            <p>
+                <label for="prodi">Program Studi</label><br>
+                <select id="prodi" name="prodi" required>
+                    <option value="">-- Pilih Program Studi --</option>
+                    <optgroup label="Sains Data">
+                        <option value="sadata">Sains Data Terapan</option>
+                    </optgroup>
+                    <optgroup label="Rekayasa">
+                        <option value="robotika">AI Robotika</option>
+                        <option value="siber">Rekayasa Keamanan Siber</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="semester">Semester</label><br>
+                <input type="number" id="semester" name="semester"
+                    min="1" max="8" step="1" value="1">
+            </p>
+            <p>Bidang Minat (boleh lebih dari satu)</p>
+            <input type="checkbox" id="minat-web" name="minat" value="web">
+            <label for="minat-web">Pengembangan Web</label><br>
+            <input type="checkbox" id="minat-data" name="minat" value="data">
+            <label for="minat-data">Analisis Data</label><br>
+            <input type="checkbox" id="minat-ai" name="minat" value="ai">
+            <label for="minat-ai">Machine Learning</label>
+            <p>
+                <label for="kota">Kota Asal</label><br>
+                <input list="daftar-kota" id="kota" name="kota">
+                <datalist id="daftar-kota">
+                    <option value="Yogyakarta">
+                    <option value="Sleman">
+                    <option value="Bantul">
+                    <option value="Klaten">
+                </datalist>
+            </p>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Jadwal Wawancara dan Lainnya</legend>
+            <p>
+                <label for="tgl-wawancara">Tanggal Wawancara</label><br>
+                <input type="date" id="tgl-wawancara" name="tgl_wawancara" required>
+            </p>
+            <p>
+                <label for="jam-wawancara">Jam Wawancara (08.00-15.00)</label><br>
+                <input type="time" id="jam-wawancara" name="jam_wawancara" min="08:00" max="15:00" step="1800" required>
+            </p>
+            <p>
+                <label for="kemampuan">Kemampuan Pemrograman (1-10)</label><br>
+                <input type="range" id="kemampuan" name="kemampuan"
+                    min="1" max="10" value="5">
+            </p>
+            <p>
+                <label for="warna">Warna Favorit</label><br>
+                <input type="color" id="warna" name="warna" value="#1e90ff">
+            </p>
+            <p>
+                <label for="portofolio">Link Portofolio</label><br>
+                <input type="url" id="portofolio" name="portofolio" placeholder="https://...">
+            </p>
+            <p>
+                <label for="foto">Pas Foto</label><br>
+                <input type="file" id="foto" name="foto" accept="image/*">
+            </p>
+            <p>
+                <label for="motivasi">Motivasi Bergabung</label><br>
+                <textarea id="motivasi" name="motivasi" rows="4" cols="50"
+                        maxlength="300"></textarea>
+            </p>
+            <p>
+                <label for="kampus">Kampus</label><br>
+                <input type="text" id="kampus" name="kampus" value="PLAI BMD" readonly>
+            </p>
+            <p>
+                <label for="kode">Kode Pendaftaran</label><br>
+                <input type="text" id="kode" name="kode" value="REG-2026" disabled>
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="checkbox" id="setuju" name="setuju" value="ya" required>
+            <label for="setuju">Saya menyatakan data yang diisi benar.</label>
+        </p>
+        <button type="submit">Daftar</button>
+        <button type="reset">Reset</button>
+        <button type="submit" formnovalidate>Simpan Draft (tanpa validasi)</button>
+
+        </form>
+
+        <p>
+            <label for="catatan">Catatan untuk Panitia</label><br>
+            <input type="text" id="catatan" name="catatan" form="form-registrasi">
+        </p>
+
+    </main>
+
+<script src="script.js"></script>
+</body>
+</html>

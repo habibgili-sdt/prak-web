@@ -1,0 +1,46 @@
+/* 1. Selector Elemen (Menargetkan tag langsung) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #e0e0e0;
+}
+
+/* 2. Selector Class (Ditandai dengan titik) */
+.btn-aksi {
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* 3. Selector ID (Ditandai dengan pagar) */
+#fieldset-khusus {
+    background-color: #fff8e7; /* Memberi warna latar belakang khusus */
+    border: 1px solid #ffd27f;
+}

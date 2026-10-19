@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+}
+
+h1 {
+    color: red;
+    font-size: 40px;
+    font-weight: normal;
+} 
+
+h2 {
+    color: green;
+    font-size: 24px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid gray;
+    padding: 8px;
+}
+
+th {
+    background-color: lightgreen;
+    color: #1e293b;
+}
+
+p {
+    line-height: 2;
+}
+
+.kartu {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 12px;
+    width: 80%;
+    margin-left: 12px;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 1000px;
+    padding: 8px 12px;
+}
+
+
+.kartu h3 {
+    font-size: 1.5rem;
+}
+
+.kartu p {
+    font-size: 1em;
+}
+
+.unggulan {
+    background-color: lightyellow;
+}
+
+#nama {
+    background-color: #f0f9ff;
+}
+
+.sorot {
+    background-color: yellow;
+}
+
+#form-registrasi legend {
+    color: navy;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    padding: 6px;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran HIMA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Formulir Pendaftaran Anggota HIMA</h1>
+
+    <!-- 1. Form Utama -->
+    <form action="#" method="POST">
+
+        <!-- FIELDSET 1: Data Diri -->
+        <fieldset>
+            <legend>Data Diri</legend>
+            <p>
+                <label for="nim">NIM (8 digit):</label><br>
+                <input type="text" id="nim" name="nim" pattern="[0-9]{8}" placeholder="Contoh: 22123456" required>
+            </p>
+            <p>
+                <label for="nama">Nama Lengkap:</label><br>
+                <input type="text" id="nama" name="nama" placeholder="Nama lengkap Anda" required>
+            </p>
+            <p>
+                <label for="tgl_lahir">Tanggal Lahir:</label><br>
+                <input type="date" id="tgl_lahir" name="tgl_lahir" min="2000-01-01" max="2009-12-31" required>
+            </p>
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="nama@mhs.ac.id" required>
+            </p>
+        </fieldset>
+
+        <!-- FIELDSET 2: Akademik & Pilihan Divisi -->
+        <fieldset>
+            <legend>Informasi Akademik & Divisi</legend>
+            <p>
+                <label for="prodi">Program Studi:</label><br>
+                <!-- Input Select dengan Optgroup -->
+                <select id="prodi" name="prodi" required>
+                    <option value="">-- Pilih Prodi --</option>
+                    <optgroup label="Fakultas Teknik">
+                        <option value="IF">Informatika</option>
+                        <option value="SI">Sistem Informasi</option>
+                    </optgroup>
+                    <optgroup label="Fakultas Ekonomi">
+                        <option value="Akuntansi">Akuntansi</option>
+                        <option value="Manajemen">Manajemen</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                Status Mahasiswa:<br>
+                <!-- Input Radio -->
+                <input type="radio" id="aktif" name="status" value="Aktif" checked>
+                <label for="aktif">Aktif</label>
+                <input type="radio" id="cuti" name="status" value="Cuti" disabled>
+                <label for="cuti">Cuti (Disabled)</label>
+            </p>
+            <p>
+                Pilihan Divisi (Bisa pilih lebih dari satu):<br>
+                <!-- Input Checkbox -->
+                <input type="checkbox" id="div1" name="divisi" value="Riset">
+                <label for="div1">Riset & Teknologi</label><br>
+                <input type="checkbox" id="div2" name="divisi" value="Humas">
+                <label for="div2">Hubungan Masyarakat</label><br>
+                <input type="checkbox" id="div3" name="divisi" value="Minat">
+                <label for="div3">Minat & Bakat</label>
+            </p>
+        </fieldset>
+
+        <!-- FIELDSET 3: Wawancara & Berkas -->
+        <fieldset id="fieldset-khusus">
+            <legend>Jadwal Wawancara & Berkas</legend>
+            <p>
+                <label for="jam_wawancara">Pilih Jam Wawancara:</label><br>
+                <input type="time" id="jam_wawancara" name="jam_wawancara" required>
+            </p>
+            <p>
+                <label for="foto">Unggah Foto Profil:</label><br>
+                <input type="file" id="foto" name="foto" required>
+            </p>
+            <p>
+                <label for="organisasi">Jumlah Organisasi yang Diikuti Saat Ini:</label><br>
+                <input type="number" id="organisasi" name="organisasi" min="0" max="5" value="0">
+            </p>
+            <p>
+                <label for="catatan">Catatan Tambahan (Readonly):</label><br>
+                <input type="text" id="catatan" name="catatan" value="Kuota terbatas untuk 50 pendaftar pertama." readonly>
+            </p>
+        </fieldset>
+
+        <!-- Tombol Aksi -->
+        <p>
+            <input type="submit" value="Daftar Sekarang" class="btn-aksi">
+            <input type="reset" value="Kosongkan Form" class="btn-aksi">
+        </p>
+    </form>
+
+    <h2>Struktur Pembagian Kuota Divisi HIMA</h2>
+    <!-- Tabel dengan Rowspan dan Colspan -->
+    <table border="1">
+        <tr>
+            <th rowspan="2">Nama Fakultas</th>
+            <th colspan="3">Kuota Anggota per Divisi</th>
+        </tr>
+        <tr>
+            <th>Riset & Tekno</th>
+            <th>Humas</th>
+            <th>Minat & Bakat</th>
+        </tr>
+        <tr>
+            <td>Fakultas Teknik</td>
+            <td>15 Orang</td>
+            <td>10 Orang</td>
+            <td>10 Orang</td>
+        </tr>
+        <tr>
+            <td>Fakultas Ekonomi</td>
+            <td>5 Orang</td>
+            <td>15 Orang</td>
+            <td>15 Orang</td>
+        </tr>
+    </table>
+
+</body>
+</html>
