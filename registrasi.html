@@ -36,6 +36,7 @@
                 <input type="password" id="password" name="password"
                     minlength="8" required>
             </p>
+            <p id="pesan-password" aria-live="polite"></p>
             <small id="jumlah-karakter"></small>
             <button type="button" id="toggle-password">Tampilkan Password</button>
         </fieldset>
@@ -154,10 +155,10 @@
             <input type="checkbox" id="setuju" name="setuju" value="ya" required>
             <label for="setuju">Saya menyatakan data yang diisi benar.</label>
         </p>
-        <button type="submit">Daftar</button>
+        <button type="submit" id="btn-daftar">Daftar</button>
         <button type="reset">Reset</button>
         <button type="submit" formnovalidate>Simpan Draft (tanpa validasi)</button>
-
+        <p id="pesan-form" aria-live="polite"></p>
         </form>
 
         <p>

@@ -27,9 +27,16 @@ statusHalaman.style.color = "green";
 
 const previewUsername = document.querySelector("#preview-username");
 
-username.addEventListener("input", function() {
+username.addEventListener("input", function () {
     previewUsername.textContent = "Username: " + username.value;
+
+    if (username.value.length > 0 && username.value.length < 4) {
+        previewUsername.style.color = "red";
+    } else {
+        previewUsername.style.color = "green";
+    }
 });
+
 
 console.log(previewUsername);
 
@@ -49,4 +56,37 @@ togglePassword.addEventListener("click", function(){
         password.type = "password";
         togglePassword.textContent = "Tampilkan Password"
     }
+});
+
+const pesanPassword = document.querySelector("#pesan-password");
+
+const pesanForm = document.querySelector("#pesan-form");
+const btnDaftar = document.querySelector("#btn-daftar");
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (event.submitter !== btnDaftar) {
+        pesanForm.textContent = "Draft disimpan sementara (simulasi).";
+        pesanForm.style.color = "gray";
+        return;
+    }
+
+    if (password.value.length < 8 || !/\d/.test(password.value)) {
+        pesanForm.textContent = "Password minimal 8 karakter dan mengandung angka.";
+        pesanForm.style.color = "red";
+        return;
+    }
+
+    pesanForm.textContent = "Registrasi " + nama.value + " berhasil divalidasi!";
+    pesanForm.style.color = "green";
+});
+
+form.addEventListener("reset", function () {
+    previewUsername.textContent = "";
+    jumlahKarakter.textContent = "";
+    pesanPassword.textContent = "";
+    pesanForm.textContent = "";
+    password.type = "password";
+    togglePassword.textContent = "Tampilkan Password";
 });
